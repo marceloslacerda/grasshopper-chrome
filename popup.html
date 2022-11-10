@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <title>Grasshopper</title>
+  
+  <head>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/libs/needcontext.js"></script>
+    <script src="js/libs/jdenticon.js"></script>
+    <script src="js/libs/colorlib.js"></script>
+    <script src="js/libs/acolorpicker.min.js"></script>
+    <script src="js/main/app.js"></script>
+    <script src="js/main/storage.js"></script>
+    <script src="js/main/utils.js"></script>
+    <script src="js/main/theme.js"></script>
+    <script src="js/main/mouse.js"></script>
+    <script src="js/main/keyboard.js"></script>
+    <script src="js/main/items.js"></script>
+    <script src="js/main/tabs.js"></script>
+    <script src="js/main/stars.js"></script>
+    <script src="js/main/closed.js"></script>
+    <script src="js/main/history.js"></script>
+    <script src="js/main/windows.js"></script>
+    <script src="js/main/settings.js"></script>
+  </head>
+  
+  <body>
+    <template id="template_tabs">
+      <div id="tabs_container" class="container unselectable"></div>
+      <div id="tabs_footer" class="footer unselectable"></div>
+    </template>
+
+    <template id="template_tabs_top">
+      <div class="flex_row_center gap_1" id="tabs_top_container">
+        <input type="text" id="tabs_filter" class="filter" autocomplete="off" placeholder="Filter">
+        
+        <select id="tabs_filter_mode" class="select" title="Filter Mode">
+          <option value="all" selected>All</option>
+          <option value="pins">Pins</option>
+          <option value="normal">Normal</option>
+          <option value="playing">Playing</option>
+          <option value="muted">Muted</option>
+        </select>
+
+        <button id="tabs_info_button" class="button" title="Information">Info</button>
+        <button id="tabs_playing_button" class="button" title="Go to a tab emitting sound">Playing</button>
+        <button id="tabs_clean_button" class="button" title="Close all normal tabs">Clean</button>
+        <button id="tabs_new_button" class="button" title="New Tab">New</button>
+      </div>
+    </template>
+
+    <template id="template_stars">
+      <div id="stars_container" class="container unselectable"></div>
+      <div id="stars_footer" class="footer unselectable"></div>
+    </template>
+
+    <template id="template_stars_top">
+      <div class="flex_row_center gap_1" id="stars_top_container">
+        <input type="text" id="stars_filter" class="filter" autocomplete="off" placeholder="Filter">
+        <button id="stars_info_button" class="button" title="Information">Info</button>
+        <button id="stars_add_button" class="button" title="Add Star">Add</button>
+      </div>
+    </template>  
+    
+    <template id="template_star_editor">
+      <div class="flex_column_center gap_3" id="star_editor_container">
+        <div id="star_info" class="flex_column_center gap_2">
+          <div>Stars are like bookmarks that you manually add</div>
+          <div>Use them to launch or focus tabs</div>
+        </div>
+
+        <div class="flex_column_center gap_1">
+          <div>Title</div>
+          <input type="text" id="star_editor_title" class="input_text">
+        </div>
+        
+        <div class="flex_column_center gap_1">
+          <div>URL</div>
+          <input type="text" id="star_editor_url" class="input_text">
+        </div>
+
+        <button id="star_editor_save" class="button">Save</button>
+      </div>
+    </template>
+
+    <template id="template_star_editor_top">
+      <div class="bigger">Star Editor</div>
+    </template>    
+    
+    <template id="template_closed">
+      <div id="closed_container" class="container unselectable"></div>
+      <div id="closed_footer" class="footer unselectable"></div>
+    </template>    
+
+    <template id="template_closed_top">
+      <div class="flex_row_center gap_1" id="closed_top_container">
+        <input type="text" id="closed_filter" class="filter" autocomplete="off" placeholder="Filter">
+        <button id="closed_info_button" class="button" title="Information">Info</button>
+      </div>
+    </template>
+
+    <template id="template_history">
+      <div id="history_container" class="container unselectable"></div>
+      <div id="history_footer" class="footer unselectable"></div>
+    </template>
+
+    <template id="template_history_top">
+      <div class="flex_row_center gap_1" id="history_top_container">
+        <input type="text" id="history_filter" class="filter" autocomplete="off" placeholder="Search">
+        <button id="history_info_button" class="button" title="Information">Info</button>
+      </div>
+    </template>
+
+    <template id="template_settings">
+      <div id="settings_container" class="flex_column_center gap_3">
+        <div id="settings_name" class="bigger" title="Made by madprops in 2022"></div>
+        <div class="separator"></div>
+        
+        <select id="settings_text_mode" class="select settings_select" title="Main text to display on the items">
+          <option value="title">Text Mode: Title</option>
+          <option value="url">Text Mode: URL</option>
+        </select>
+          
+        <select id="settings_warn_on_tab_close" class="select settings_select" title="This is the warning when closing pins or audible tabs">
+          <option value="warn">Warn On Tab Close</option>
+          <option value="no_warn">No Warn On Tab Close</option>
+        </select>        
+        
+        <div class="separator"></div>
+
+        <div id="color_picker"></div>
+
+        <div class="separator"></div>
+
+        <div id="window_order" class="unselectable" title="Window Order"></div>
+
+        <div class="separator"></div>
+        
+        <button id="settings_defaults_button" class="button">Reset Settings</div>
+      </div>
+    </template>  
+
+    <template id="template_settings_top"></template></template>
+
+    <script src="js/main/main.js"></script>
+  </body>
+</html>
