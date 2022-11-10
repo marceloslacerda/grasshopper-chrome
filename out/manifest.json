@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Grasshopper",
+    "version": "17",
+    "description": "Alternative tab manager",
+    "permissions": [
+        "tabs",
+        "sessions",
+        "history",
+        "storage"
+    ],
+    "icons": {
+        "128": "icon128.png"
+    },
+    "action": {
+        "default_icon": {
+            "128": "icon128.png"
+        },
+        "default_title": "Grasshopper",
+        "default_popup": "popup.html"
+    },
+    "commands": {
+        "_execute_browser_action": {
+
+        }
+    }
+}
