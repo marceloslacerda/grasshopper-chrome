@@ -1,0 +1,284 @@
+:root {
+  --widget_height: 1.7rem;
+}
+
+@font-face {
+	font-family: imported_font;
+	src: url(Roboto-Regular.ttf);
+}
+
+body, html {
+  font-family: imported_font, sans-serif;
+  font-size: 17px;
+  color: var(--font_color);
+  width: 700px;
+  height: 600px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--background_color);
+}
+
+.window_main {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  background-color: var(--background_color);
+  z-index: 9999999;
+  width: 100vw;
+  height: 100vh;
+}
+
+.window_content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--background_color);  
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.window_top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding-right: 1rem;
+  min-height: 1rem;
+  flex-shrink: 0;
+  padding-top: 0.7rem;
+  padding-bottom: 0.77rem;
+}
+
+.window_top_center {
+  justify-content: center;
+}
+
+.window_top_left {
+  justify-content: start;
+}
+
+.window_x {
+  right: 0rem;
+  padding: 0.8rem;
+  padding-right: 1rem;
+  position: absolute;
+  font-size: 1.2rem;
+}
+
+.container {
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  position: relative;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.filter {
+  height: var(--widget_height);
+  background-color: var(--alt_color);
+  color: var(--font_color);
+  outline: none;
+  border-width: 0;
+  font-size: 1rem;
+  flex-grow: 0;
+  width: 9rem;
+  padding: 0;
+  padding-left: 0.25rem;
+}
+
+.select {
+  height: var(--widget_height);
+  font-size: 0.88rem;
+  background-color: transparent;
+  color: var(--font_color);
+  border: none;
+  border: 2px solid var(--alt_color);
+}
+
+.button {
+  height: var(--widget_height);
+  font-size: 0.92rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  background-color: transparent;
+  color: var(--font_color);
+  min-width: 1.5rem;
+  border: none;
+  border: 2px solid var(--alt_color);
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  align-items: center;
+}
+
+.item_empty {
+  min-height: 1.6rem;
+}
+
+.item_icon_container {
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding: 0.5rem;
+  padding-right: 0.66rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item_icon {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.item_text {
+  width: 100%;
+  white-space: pre;
+  overflow: hidden;
+  margin-right: 0.5rem;
+}
+
+.selected {
+  background-color: var(--alt_color);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.action, .actionbox, .button {
+  cursor: pointer;
+  transition: text-shadow 100ms, box-shadow 100ms;
+}
+
+.action:hover {
+  text-shadow: 0 0 1rem currentColor;
+}
+
+.actionbox:hover, .button:hover {
+	box-shadow: 0 0 0.3rem currentColor;
+}
+
+.unselectable {
+  user-select: none;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding: 0.5rem;
+  height: 1.5rem;
+  overflow: hidden;
+  border-top: 1px solid var(--alt_color);
+  white-space: nowrap;
+}
+
+.flex_column_center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex_row_center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#settings_container {
+  margin-bottom: 5rem;
+}
+
+.settings_select {
+  width: 12rem;
+}
+
+.gap_1 {
+  gap: 0.5rem;
+}
+
+.gap_2 {
+  gap: 1rem;
+}
+
+.gap_3 {
+  gap: 1.5rem;
+}
+
+.gap_4 {
+  gap: 2rem;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.separator {
+  border-top: 1px solid var(--alt_color);
+  width: 12rem;
+}
+
+.input_text {
+  background-color: var(--alt_color);
+  color: var(--font_color);
+  outline: 1px solid var(--alt_color);
+  border-width: 0;
+  font-size: 1rem;
+  padding: 0.05rem;
+  flex-grow: 0;
+  width: 18rem;
+  text-align: center;
+  padding: 0.2rem;
+}
+
+.bigger {
+  font-size: 1.2rem;
+}
+
+#star_info {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.menu_icon {
+  padding-left: 0.66rem;
+  padding-right: 0.3rem;
+}
+
+#window_order {
+  border: 1px solid var(--alt_color);
+}
+
+.window_order_item {
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+.window_order_item_text {
+  text-align: center;
+  width: 5rem;
+}
+
+.up_down_button {
+  width: 4rem;
+}
+
+.clicked {
+  background-color: var(--alt_color) !important;
+}
