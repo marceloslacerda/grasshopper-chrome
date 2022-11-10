@@ -413,7 +413,6 @@ App.create_item_element = function (mode, item) {
   
   let icon = App.get_img_icon(item.favicon, item.url, item.pinned)
   item.element.append(icon)
-  App.pin_item_icon(item)
 
   let text = App.create("div", "item_text")
   item.element.append(text)
@@ -446,7 +445,7 @@ App.get_img_icon = function (favicon, url, pinned = false) {
   if (pinned) {
     App.pin_item_icon(icon_container)
   }
-  
+
   return icon_container
 }
 
